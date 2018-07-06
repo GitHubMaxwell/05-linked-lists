@@ -1,15 +1,18 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure
 ====
-TRAVIS BADGE: [![Build Status](https://travis-ci.com/GitHubMaxwell/05-linked-lists.svg?branch=master)](https://travis-ci.com/GitHubMaxwell/05-linked-lists)
+TRAVIS BADGE:[![Build Status](https://travis-ci.com/GitHubMaxwell/05-linked-lists.svg?branch=max-lab05)](https://travis-ci.com/GitHubMaxwell/05-linked-lists)
 TRAVIS: https://travis-ci.com/GitHubMaxwell/05-linked-lists 
-HEROKU: 
+HEROKU: https://lab05-linkedlist.herokuapp.com/
 GitHUB PR:
 
-####  Documentation  
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block useage examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
+## Steps
+* fork/clone code down
+* npm install (for dependencies)
+* npm test to see passing tests on all methods
 
+## Big O
+* append - time O(n) / space O(n)
+* prepend - time O(1) / space O(n)
+* remove - time O(n) / space O(1)
+* serialize - time O(n) / space O(n)
+* deserialize - time O(n) / space O(n)
