@@ -1,0 +1,28 @@
+{
+  "name": "05-linked-lists",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure ==== TRAVIS BADGE: [![Build Status](https://travis-ci.com/GitHubMaxwell/05-linked-lists.svg?branch=master)](https://travis-ci.com/GitHubMaxwell/05-linked-lists) TRAVIS: https://travis-ci.com/GitHubMaxwell/05-linked-lists  HEROKU:",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint **/*.js",
+    "start": "nodemon  index.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitHubMaxwell/05-linked-lists.git"
+  },
+  "author": "maxwell rediker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GitHubMaxwell/05-linked-lists/issues"
+  },
+  "homepage": "https://github.com/GitHubMaxwell/05-linked-lists#readme",
+  "dependencies": {
+    "eslint": "^5.0.1",
+    "jest": "^23.3.0"
+  }
+}

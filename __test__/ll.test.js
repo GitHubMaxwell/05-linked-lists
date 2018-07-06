@@ -1,50 +1,93 @@
 let linkedList = require('../lib/ll.js');
 
 describe('Linked List Insertion Module', () => {
-
-  it('POL: return length 0', () => {
-    const LL = new linkedList();
-    const actual = LL.length;
-    expect(actual).toBe(0);
-  });  
   
-  it('APPEND: should return length 1', () => {
+  it('APPEND: should return length 1 and head value of 4', () => {
     const expected = 1;
     
     const newNode = new linkedList();
-    const newAppend = newNode.append(4);
+    newNode.append(4);
+    expect(newNode.head.val).toBe(4);
     expect(newNode.length).toBe(expected);
   });
 
-  it('APPEND: should return length 2', () => {
-    const expected = 2;
+  it('PREPEND: new head val = 5 and length equal to 3', () => {
+    const expected = 5;
     
     const newNode = new linkedList();
-    const newAppend = newNode.append(4);
-    const newAppend1 = newNode.append(4);
-    expect(newNode.length).toBe(expected);
+    newNode.append(4);
+    newNode.append(3);
+
+    newNode.prepend(5);
+
+    expect(newNode.head.val).toBe(expected);
+    expect(newNode.length).toBe(3);
+
   });
-  // it('INSERT BEFORE: should insert 5 BEFORE 2', () => {
-  //   const expected = 5;
+
+  it('REVERSE: new head val = 3', () => {
     
-  //   const newNode = new linkedList();
-  //   const newAppend = newNode.append(1);
-  //   const newAppend1 = newNode.append(2);
-  //   const newAppend2 = newNode.append(3);
-  //   const insert = newNode.insertBefore(2,5);
-  //   console.log('BEFORE',newNode);
-  //   // console.log('newApp',newNode.newAppend);
-  //   // console.log('insert',insert);
-  //   // console.log('newNode.head.val',newNode.head.val);
-  //   expect(newNode.insert.val).toBe(expected);
-  // });
-  // it('INSERT AFTER: should insert 5 AFTER 2', () => {
-  //   const expected = 2;
+    const newNode = new linkedList();
+    newNode.append(1);
+    newNode.append(2);
+    newNode.append(3);
+
+    newNode.reverse();
+
+    expect(newNode.head.val).toBe(3);
+  });
+
+  it('REMOVE: new head val = 2', () => {
     
-  //   const newNode = new linkedList();
-  //   const newAppend = newNode.append(2);
-  //   const newAppend1 = newNode.insertAfter(2,5);
-  //   console.log('AFTER',newNode);
-  //   // expect(newNode.length).toBe(expected);
-  // });
+    const newNode = new linkedList();
+    newNode.append(1);
+    newNode.append(2);
+    newNode.append(3);//?
+
+    newNode.remove(1);//?
+
+    expect(newNode.head.val).toBe(2);
+  });
+
+  it('REMOVE: new head val = 3', () => {
+    
+    const newNode = new linkedList();
+    newNode.append(1);
+    newNode.append(2);
+    newNode.append(3);//?
+
+    newNode.remove(2);//?
+
+    // console.log(newNode.head);
+    // console.log(newNode);
+
+    expect(newNode.head.next.val).toBe(3);
+  });
+
+
+  it('SERIALIZE: return string = [1] -> [2] -> [3] -> [X]', () => {
+    
+    const newNode = new linkedList();
+    newNode.append(1);
+    newNode.append(2);
+    newNode.append(3);
+
+    let serialize = newNode.serialize();
+
+    expect(serialize).toEqual('[1] -> [2] -> [3] -> [X]');
+  });
+
+  it('DESERIALIZE: return LL from string = [1] -> [2] -> [3] -> [X]', () => {
+    const newNode = new linkedList();
+    newNode.append(1);
+    newNode.append(2);
+    newNode.append(3);
+
+    const string = '[1] -> [2] -> [3] -> [X]';
+   
+    let deserialize = linkedList.deserialize(string);
+
+    expect(deserialize).toEqual(newNode);
+  });
+
 });
