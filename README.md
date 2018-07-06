@@ -3,7 +3,7 @@
 TRAVIS BADGE:[![Build Status](https://travis-ci.com/GitHubMaxwell/05-linked-lists.svg?branch=max-lab05)](https://travis-ci.com/GitHubMaxwell/05-linked-lists)
 TRAVIS: https://travis-ci.com/GitHubMaxwell/05-linked-lists 
 HEROKU: https://lab05-linkedlist.herokuapp.com/
-GitHUB PR:
+GitHUB PR: https://github.com/GitHubMaxwell/05-linked-lists/pull/2
 
 ## Steps
 * fork/clone code down
